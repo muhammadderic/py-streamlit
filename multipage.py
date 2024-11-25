@@ -2,6 +2,7 @@ from streamlit_option_menu import option_menu
 
 from pages.create import create
 from pages.read import read
+from pages.update import update
 
 def menu():
   selected = option_menu(
@@ -19,3 +20,5 @@ def menu():
     create()
   elif selected == "Read":
     read()
+  elif selected == "Update":
+    update()

@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 import streamlit as st
 from supabase import create_client, Client
@@ -18,6 +17,9 @@ def read():
 
   for i in range(0, len(listData)):
     df.loc[i] = [listData[i]['id'], listData[i]['name'], listData[i]['age']]
+
+  # Alternate (line: 15-19)
+  # df = pd.DataFrame(listData)  # Automatically converts JSON-like data to a DataFrame
 
   # Display the DataFrame
   st.dataframe(df)
