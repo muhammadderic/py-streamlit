@@ -1,3 +1,5 @@
 import streamlit as st
+from multipage import menu
 
-st.title("Hello Deric")
+if __name__ == "__main__":
+  menu()
